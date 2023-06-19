@@ -47,34 +47,7 @@
       ;we start at count = n - 2 since f(1), f(2) are just b and a. f(0) is c
       (f-iter 2 1 0 (- n 2))))
 
-
-;lambda
-(define x 2)
-(+    ((lambda (x y) (+ y (* x 2))) 3 6)
-   x)
-
-;same expression but using let
-; more readable imo
-(+ (let ((x 3) (y 6)) (+ y (* x 2))) x)
-
-(define (square x)
-  (* x x))
-(define (f2 x y)
-  (let ((a (+ 1 (* x y)))
-        (b (- 1 y)))
-    (+ (* x (square a))
-       (* y b)
-       (* a b))))
-
-(define (average x y)
-  (/ (+ x y) 2))
-
-(define (average-damp f)
-  (lambda (x) (average x (f x))))
-
-;Exercise 1.41.  Define a procedure double that takes a procedure of one argument as argument and returns a procedure that applies the original procedure twice.
-;For example, if inc is a procedure that adds 1 to its argument, then (double inc) should be a procedure that adds 2.
-(define (double f)
-  (lambda (x)
-    (f (f x)))
-  )
+        
+  
+  
+  
